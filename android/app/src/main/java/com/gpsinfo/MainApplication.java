@@ -3,6 +3,8 @@ package com.gpsinfo;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.sensormanager.SensorManagerPackage;
+import com.sensors.RNSensorsPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -22,7 +24,9 @@ public class MainApplication extends Application implements ReactApplication {
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
-          new MainReactPackage()
+          new MainReactPackage(),
+            new SensorManagerPackage(),
+            new RNSensorsPackage()
       );
     }
 
